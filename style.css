@@ -48,8 +48,8 @@ nav {
 .eyebrow {
     text-transform: uppercase;
     letter-spacing: 4px;
-    font-size: 0.9rem;
-    margin-bottom: 20px;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
     opacity: 0.85;
 }
 
@@ -115,7 +115,7 @@ nav a:hover {
 .hero h1 {
     font-size: 5rem;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
 }
 
 .hero p {
@@ -128,7 +128,7 @@ nav a:hover {
 .subtitle {
     font-size: 1.35rem;
     max-width: 650px;
-    margin: 0 auto 45px;
+    margin: 0 auto 40px;
 }
 
 .scroll-indicator {
@@ -313,12 +313,6 @@ footer {
     .hero h1 {
 
         font-size: 3rem;
-
-    }
-
-    .hero p {
-
-        font-size: 1.2rem;
 
     }
 
