@@ -1,8 +1,101 @@
-body {
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
     background: #f8f7f2;
     color: #333;
+    line-height: 1.6;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 60px;
+
+    background: rgba(46,94,62,0.95);
+
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    opacity: 0.8;
+}
+
+.hero {
+
+    height: 100vh;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.4),
+            rgba(0,0,0,0.4)
+        ),
+        url("images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.button {
+
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    background: #c9794a;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #b46b41;
 }
 
 header {
@@ -13,9 +106,25 @@ header {
 }
 
 main {
-    max-width: 1000px;
+
+    max-width: 1100px;
+
     margin: auto;
-    padding: 40px 20px;
+
+    padding: 100px 30px;
+}
+
+section {
+    margin-bottom: 120px;
+}
+
+h2 {
+
+    font-size: 2.2rem;
+
+    color: #2e5e3e;
+
+    margin-bottom: 25px;
 }
 
 section {
