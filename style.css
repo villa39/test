@@ -41,6 +41,16 @@ nav {
     backdrop-filter: blur(6px);
 
     z-index: 1000;
+
+    background: rgba(46, 94, 62, 0.75);
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    opacity: 0.85;
 }
 
 .logo {
@@ -103,10 +113,9 @@ nav a:hover {
 }
 
 .hero h1 {
-
-    font-size: 4.5rem;
-    margin-bottom: 15px;
-
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
 .hero p {
@@ -114,6 +123,18 @@ nav a:hover {
     font-size: 1.5rem;
     margin-bottom: 40px;
 
+}
+
+.subtitle {
+    font-size: 1.35rem;
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.scroll-indicator {
+    margin-top: 70px;
+    font-size: 2rem;
+    opacity: 0.7;
 }
 
 .button {
@@ -155,7 +176,7 @@ main {
 
 section {
 
-    margin-bottom: 100px;
+    margin-bottom: 140px;
 
 }
 
@@ -192,6 +213,11 @@ h2 {
 
     flex: 1;
 
+}
+
+.about-grid p {
+    margin-bottom: 20px;
+    max-width: 60ch;
 }
 
 /* ---------- Gallery ---------- */
@@ -232,6 +258,8 @@ h2 {
 
     flex: 1;
 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
 }
 
 .card h3 {
@@ -240,6 +268,11 @@ h2 {
 
     margin-bottom: 15px;
 
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
 }
 
 /* ---------- Contact ---------- */
