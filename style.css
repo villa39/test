@@ -1,64 +1,92 @@
+/* ---------- Reset ---------- */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f8f7f2;
-    color: #333;
-    line-height: 1.6;
+/* ---------- General ---------- */
+
+html {
+    scroll-behavior: smooth;
 }
 
+body {
+    font-family: "Inter", sans-serif;
+    background: #F8F7F2;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* ---------- Navigation ---------- */
+
 nav {
+
     position: fixed;
-    width: 100%;
+
     top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 20px 60px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 20px 60px;
+    background: rgba(46, 94, 62, 0.92);
 
-    background: rgba(46,94,62,0.95);
+    backdrop-filter: blur(6px);
+
+    z-index: 1000;
+}
+
+.logo {
 
     color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+
 }
 
 nav ul {
+
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 35px;
+
 }
 
 nav a {
+
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
+
 }
 
 nav a:hover {
-    opacity: 0.8;
+
+    opacity: .8;
+
 }
+
+/* ---------- Hero ---------- */
 
 .hero {
 
     height: 100vh;
 
-    background-image:
-        linear-gradient(
-            rgba(0,0,0,0.4),
-            rgba(0,0,0,0.4)
-        ),
+    background:
+        linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
         url("images/hero.jpg");
 
     background-size: cover;
     background-position: center;
 
     display: flex;
-
     justify-content: center;
     align-items: center;
 
@@ -67,23 +95,34 @@ nav a:hover {
     color: white;
 }
 
-.hero-text h1 {
-    font-size: 4rem;
-    margin-bottom: 20px;
+.hero-content {
+
+    max-width: 700px;
+    padding: 20px;
+
 }
 
-.hero-text p {
+.hero h1 {
+
+    font-size: 4.5rem;
+    margin-bottom: 15px;
+
+}
+
+.hero p {
+
     font-size: 1.5rem;
     margin-bottom: 40px;
+
 }
 
 .button {
 
     display: inline-block;
 
-    padding: 15px 30px;
+    padding: 14px 30px;
 
-    background: #c9794a;
+    background: #C9794A;
 
     color: white;
 
@@ -91,59 +130,178 @@ nav a:hover {
 
     border-radius: 8px;
 
-    font-weight: bold;
+    font-weight: 600;
+
+    transition: .25s;
+
 }
 
 .button:hover {
-    background: #b46b41;
+
+    background: #B56A42;
+
 }
 
-header {
-    background: #2e5e3e;
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
-}
+/* ---------- Main ---------- */
 
 main {
 
-    max-width: 1100px;
-
+    width: min(1100px, 90%);
     margin: auto;
 
-    padding: 100px 30px;
+    padding: 90px 0;
+
 }
 
 section {
-    margin-bottom: 120px;
+
+    margin-bottom: 100px;
+
 }
 
 h2 {
 
-    font-size: 2.2rem;
+    color: #2E5E3E;
 
-    color: #2e5e3e;
+    font-size: 2.3rem;
 
-    margin-bottom: 25px;
+    margin-bottom: 40px;
+
 }
 
-section {
-    margin-bottom: 60px;
+/* ---------- About ---------- */
+
+.about-grid {
+
+    display: flex;
+
+    gap: 50px;
+
+    align-items: center;
+
 }
 
-h2 {
-    color: #2e5e3e;
+.about-grid img {
+
+    width: 45%;
+    border-radius: 12px;
+
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+.about-grid div {
+
+    flex: 1;
+
 }
+
+/* ---------- Gallery ---------- */
+
+.gallery {
+
+    display: flex;
+
+    gap: 20px;
+
+}
+
+.gallery img {
+
+    width: 33.3%;
+
+    border-radius: 12px;
+
+}
+
+/* ---------- Cards ---------- */
+
+.cards {
+
+    display: flex;
+
+    gap: 25px;
+
+}
+
+.card {
+
+    background: #EFEDE5;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    flex: 1;
+
+}
+
+.card h3 {
+
+    color: #2E5E3E;
+
+    margin-bottom: 15px;
+
+}
+
+/* ---------- Contact ---------- */
+
+#contact p {
+
+    margin-bottom: 10px;
+
+}
+
+/* ---------- Footer ---------- */
 
 footer {
-    background: #2e5e3e;
+
+    background: #2E5E3E;
+
     color: white;
+
     text-align: center;
-    padding: 20px;
+
+    padding: 25px;
+
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 800px) {
+
+    nav {
+
+        flex-direction: column;
+        gap: 20px;
+
+        padding: 20px;
+
+    }
+
+    .hero h1 {
+
+        font-size: 3rem;
+
+    }
+
+    .hero p {
+
+        font-size: 1.2rem;
+
+    }
+
+    .about-grid,
+    .gallery,
+    .cards {
+
+        flex-direction: column;
+
+    }
+
+    .about-grid img,
+    .gallery img {
+
+        width: 100%;
+
+    }
+
 }
